@@ -1,0 +1,13 @@
+.title {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    bottom: 0;
+    border: 6px solid #f8d442;
+    transform: translateX(-100%);
+  }
+}

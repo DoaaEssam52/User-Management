@@ -1,0 +1,64 @@
+#navbar {
+  background-color: #f2eae1;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  .title {
+    font-size: 18px;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 0;
+      bottom: 0;
+      border: 2px solid #f8d442;
+    }
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+  }
+
+  .user-name {
+    font-size: 17px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .role {
+    color: #feaf00;
+  }
+
+  li {
+    font-size: 14px;
+    color: #000;
+
+    cursor: pointer;
+
+    a {
+      i {
+        margin-right: 8px;
+      }
+    }
+
+    .logout {
+      text-decoration: none;
+      color: #000;
+      position: absolute;
+      bottom: 25px;
+    }
+  }
+}
+.activeLink {
+  color: blue;
+  background-color: red !important;
+}

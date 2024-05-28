@@ -1,0 +1,31 @@
+.users-list {
+  background-color: #f8f8f8;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+
+  td,
+  th {
+    border: none;
+  }
+
+  th {
+    background-color: #f8f8f8;
+  }
+
+  img {
+    border-radius: 4px;
+    border: 1px solid green;
+  }
+
+  i {
+    font-size: 16px;
+    color: #feaf00;
+
+    cursor: pointer;
+  }
+}
+
+

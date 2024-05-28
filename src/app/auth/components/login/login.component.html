@@ -1,0 +1,43 @@
+<div class="auth-container">
+  <div class="auth-content p-5">
+    <div class="text-center">
+      <h3 class="title mb-5">User Management System</h3>
+      <h4>SIGN IN</h4>
+      <label class="mb-4">Enter your credentials to access your account</label>
+    </div>
+
+    <form [formGroup]="loginForm">
+      <div class="form-group mb-3">
+        <label>Username</label>
+        <input type="text" class="form-control" formControlName="username" />
+
+        <small
+          *ngIf="_handleForms.isRequiredError(loginForm, 'username')"
+          class="text-danger"
+          >Please enter your username</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Enter your password"
+          formControlName="password"
+        />
+      </div>
+
+      <small
+        *ngIf="_handleForms.isRequiredError(loginForm, 'password')"
+        class="text-danger"
+        >Please enter your password</small
+      >
+      <button (click)="login()" type="submit" class="w-100 btn my-4">
+        SIGN IN
+      </button>
+    </form>
+
+    <small *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</small>
+  </div>
+</div>

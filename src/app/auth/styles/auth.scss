@@ -1,0 +1,15 @@
+.auth-container {
+  background: linear-gradient(#f8d442, #feaf00);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.auth-content {
+  border-radius: 20px;
+
+  background-color: white;
+}
