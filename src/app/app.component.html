@@ -1,9 +1,1 @@
-<div class="d-flex" *ngIf="isLoggedIn; else authPages">
-  <app-sidebar class="sidebar"></app-sidebar>
-
-  <div class="content"><router-outlet></router-outlet></div>
-</div>
-
-<ng-template #authPages>
-  <router-outlet></router-outlet>
-</ng-template>
+<router-outlet></router-outlet>

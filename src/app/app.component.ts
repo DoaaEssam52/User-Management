@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  isLoggedIn = localStorage.getItem('token');
-
-  constructor() {
-    console.log('isLoggedIn', this.isLoggedIn);
-  }
+  constructor() {}
 }

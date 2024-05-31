@@ -10,22 +10,27 @@
     <label class="w-100 text-center role mb-5">Admin</label>
 
     <ul class="nav navbar-nav navbar-right mt-3">
-      <li class="mb-3">
+      <li class="mb-4">
         <a><i class="fas fa-house"></i> Home</a>
       </li>
-      <li class="mb-3">
-        <a routerLink="users" routerLinkActive="activeLink">
+      <li class="mb-4">
+        <a [routerLink]="['/users/list']" routerLinkActive="activeLink">
           <i class="fas fa-users"></i> Users</a
         >
       </li>
-      <li class="mb-3">
+      <li class="mb-4">
         <a> <i class="fas fa-user"></i> Add User</a>
       </li>
-      <li class="mb-3">
+      <li class="mb-4">
         <a> <i class="fas fa-address-card"></i> Profile</a>
       </li>
       <li>
-        <a  (click)="logout()"  class="logout" routerLink="users" routerLinkActive="activeLink">
+        <a
+          (click)="logout()"
+          class="logout"
+          routerLink="users"
+          routerLinkActive="activeLink"
+        >
           Logout <i class="mx-2 fas fa-right-from-bracket"></i
         ></a>
       </li>

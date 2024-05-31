@@ -13,7 +13,14 @@ export class UsersService {
   constructor(private _httpClient: HttpClient) {}
 
   // CALLING ENDPOINTS
-  getUsers(): Observable<{ users: User[] }> {
-    return this._httpClient.get<{ users: User[] }>(ENDPOINTS.getUsers);
+  getUsers(limit: number = 30): Observable<{ total: number; users: User[] }> {
+    return this._httpClient.get<{ total: number; users: User[] }>(
+      ENDPOINTS.getUsers,
+      { params: { limit } }
+    );
+  }
+
+  editUser(id: number | null, body: any): Observable<User> {
+    return this._httpClient.put<User>(ENDPOINTS.getUsers + '/' + id, body);
   }
 }
